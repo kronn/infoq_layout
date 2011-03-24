@@ -1,0 +1,13 @@
+{
+  "name": "InfoQ Layout Tweaks",
+  "version": "0.1",
+  "description": "Tweak the InfoQ Layout to let the sidebars disappear",
+  "background_page": "background.html",
+  "permissions": [
+    "http://www.infoq.com/",
+    "tabs"
+  ],
+  "page_action": {
+    "default_icon": "infoq.png"
+  }
+}

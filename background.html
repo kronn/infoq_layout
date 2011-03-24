@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      chrome.tabs.onUpdated.addListener(function checkForInfoQ(tabId, changeInfo, tab) {
+        if (tab.url.indexOf('infoq') > -1) {
+          chrome.pageAction.show(tabId);
+        }
+      });
+
+      chrome.pageAction.onClicked.addListener(function(tab) {
+        chrome.tabs.executeScript(tab.id, {
+          file: "contentscript.js"
+        });
+      });
+    </script>
+  </head>
+</html>
